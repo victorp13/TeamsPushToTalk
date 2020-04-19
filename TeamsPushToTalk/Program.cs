@@ -14,7 +14,7 @@ namespace TeamsPushToTalk
             Console.WriteLine(@"Push-to-Talk for MS Teams
 
 Usage:
-  Hold down the middle mouse button to speak.
+  Hold down the numpad 0 key to speak.
   Press Ctrl+C to exit.
 
 See https://github.com/sidiandi/TeamsPushToTalk
