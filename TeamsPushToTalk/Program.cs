@@ -20,7 +20,7 @@ Usage:
 See https://github.com/sidiandi/TeamsPushToTalk
 
 ");
-            PushToTalkWithMiddleMouseButton();
+            PushToTalkWithKey();
         }
 
         static void PushToTalkWithMiddleMouseButton()
@@ -48,14 +48,14 @@ See https://github.com/sidiandi/TeamsPushToTalk
             }
         }
 
-        static void PushToTalkWithLeftControlKey()
+        static void PushToTalkWithKey()
         {
             using (var teams = new Teams())
             using (var monitor = new HumanInterfaceDeviceMonitor())
             {
                 using (monitor.KeyDown.Subscribe(kea =>
                 {
-                    if (kea.KeyCode == System.Windows.Forms.Keys.LControlKey)
+                    if (kea.KeyCode == System.Windows.Forms.Keys.NumPad0)
                     {
                         monitor.Disable = true;
                         teams.Unmute();
@@ -64,7 +64,7 @@ See https://github.com/sidiandi/TeamsPushToTalk
                 }))
                 using (monitor.KeyUp.Subscribe(kea =>
                 {
-                    if (kea.KeyCode == System.Windows.Forms.Keys.LControlKey)
+                    if (kea.KeyCode == System.Windows.Forms.Keys.NumPad0)
                     {
                         monitor.Disable = true;
                         teams.Mute();

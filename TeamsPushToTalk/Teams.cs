@@ -22,7 +22,7 @@ namespace TeamsPushToTalk
 
             foreach (var i in candidates)
             {
-                Console.WriteLine($"{i.Text} | {i.Class}");
+                //Console.WriteLine($"{i.Text} | {i.Class}");
             }
 
             return candidates.FirstOrDefault();
